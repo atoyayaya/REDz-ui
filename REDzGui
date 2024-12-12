@@ -125,6 +125,7 @@ local SetProps, SetChildren, InsertTheme, Create do
 				if rawget(decode, "UISize") then redzlib.Save["UISize"] = decode["UISize"] end
 				if rawget(decode, "TabSize") then redzlib.Save["TabSize"] = decode["TabSize"] end
 				if rawget(decode, "Theme") and VerifyTheme(decode["Theme"]) then redzlib.Save["Theme"] = decode["Theme"] end
+				if rawget(decode, "click") then redzlib.Save["click"] = decode["click"] end
 			end
 		end
 	end
@@ -721,9 +722,13 @@ function redzlib:MakeWindow(Configs)
 		end
 	end)
 	
+	local muscle = 0
+	
 	ConnectSave(ControlSize2, function()
 		redzlib.Save.TabSize = MainScroll.Size.X.Offset
-		SaveJson("安脚本.json", redzlib.Save)
+		SaveJson("测试1.json", redzlib.Save)
+		redzlib.Save.TabSize = muscle
+		SaveJson("测试1.json", redzlib.Save)
 	end)
 	
 	local ButtonsFolder = Create("Folder", TopBar, {
