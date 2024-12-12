@@ -717,7 +717,7 @@ function redzlib:MakeWindow(Configs)
 	ConnectSave(ControlSize1, function()
 		if not Minimized then
 			redzlib.Save.UISize = {MainFrame.Size.X.Offset, MainFrame.Size.Y.Offset}
-			SaveJson("安脚本.json", redzlib.Save)
+			SaveJson("测试1.json", redzlib.Save)
 		end
 	end)
 	
