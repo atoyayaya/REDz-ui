@@ -653,6 +653,7 @@ function redzlib:MakeWindow(Configs)
 		}), "DarkText")
 	}), "Text")
 	
+	local muscle = 0
 	local MainScroll = InsertTheme(Create("ScrollingFrame", Components, {
 		Size = UDim2.new(0, redzlib.Save.TabSize, 1, -TopBar.Size.Y.Offset),
 		ScrollBarImageColor3 = Theme["Color Theme"],
@@ -722,11 +723,7 @@ function redzlib:MakeWindow(Configs)
 		end
 	end)
 	
-	local muscle = 0
-	
 	ConnectSave(ControlSize2, function()
-		redzlib.Save.TabSize = MainScroll.Size.X.Offset
-		SaveJson("测试1.json", redzlib.Save)
 		redzlib.Save.click = muscle
 		SaveJson("测试1.json", redzlib.Save)
 	end)
