@@ -727,7 +727,7 @@ function redzlib:MakeWindow(Configs)
 	ConnectSave(ControlSize2, function()
 		redzlib.Save.TabSize = MainScroll.Size.X.Offset
 		SaveJson("测试1.json", redzlib.Save)
-		redzlib.Save.TabSize = muscle
+		redzlib.Save.click = muscle
 		SaveJson("测试1.json", redzlib.Save)
 	end)
 	
