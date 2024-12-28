@@ -24,9 +24,9 @@ local Tab = Window:MakeTab({"公告", "cool"})
 
 
 Tab:AddDiscordInvite({
-    Title = "《我是睡觉，给我低调点🤓》",
+    Title = "我是157",
     Logo = "rbxassetid://139743288604595",
-    Invite = "《我是睡觉，给我低调点🤓》"
+    Invite = "157牛逼！"
 })
 
 Tab:AddSection("脚本已开启反挂机")
